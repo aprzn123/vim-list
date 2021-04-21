@@ -12,9 +12,10 @@ CONTENTS                                    *vl-contents*
 
     1. Usage ................. |vl-usage|
     2. Mappings .............. |vl-mappings|
-    3. Licence ............... |vl-license|
-    4. Bugs and Contributing . |vl-bugs-contributing|
-    5. Credits ............... |vl-credits|
+    3. Configuration ......... |vl-config|
+    4. Licence ............... |vl-license|
+    5. Bugs and Contributing . |vl-bugs-contributing|
+    6. Credits ............... |vl-credits|
 
 =======================================================
 Section 1: Usage                               *vl-usage*
@@ -51,13 +52,32 @@ q                                                 *vl-q*
         Saves and exits from the current list.
 
 =======================================================
-Section 3: License                           *vl-license*
+Section 3: Configuration                      *vl-config*
+
+g:list#default_file                 *g:list#default_file*
+        The todo list which is opened by default. If unset,
+        defaults to `todo`.
+
+g:list#size                                 *g:list#size*
+        The width of the list window, in characters. If
+        unset, defaults to 40.
+
+g:list#path                                 *g:list#path*
+        The path where saved lists are located. Defaults 
+        to `~/.vimlist`.
+
+g:list#completed_character   *g:list#completed_character*
+        The character that is displyed next to checked
+        off items on a list. Defaults to ✓. 
+
+=======================================================
+Section 4: License                           *vl-license*
 
 vim-list is released under the GNU GPLv3 license.
 See https://www.gnu.org/licenses/gpl-3.0.en.html
 
 =======================================================
-Section 4: Bugs and Contributing   *vl-bugs-contributing*
+Section 5: Bugs and Contributing   *vl-bugs-contributing*
 
 Bugs can be reported in the issues tab of this project's
 GitHub page. This is also where you should go if you want
@@ -65,7 +85,7 @@ to contribute to the project.
 https://github.com/aprzn123/vim-list/issues
 
 =======================================================
-Section 5: Credits                           *vl-credits*
+Section 6: Credits                           *vl-credits*
 
 Contributors may add their name to this list when they
 make thier contribution to the project.
