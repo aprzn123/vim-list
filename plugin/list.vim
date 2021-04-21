@@ -12,10 +12,10 @@ endif
 " Opens a new vertical split with either the given file or the default file
 function! s:OpenList(...)
     if a:0
-        execute "vsplit " . s:path . "/" . a:1 . ".todo"
+        execute "botright vsplit " . s:path . "/" . a:1 . ".todo"
         execute "vertical resize" . s:size
     else
-        execute "vsplit " . s:path . "/" . s:default_file . ".todo"
+        execute "botright vsplit " . s:path . "/" . s:default_file . ".todo"
         execute "vertical resize" . s:size
     endif
 endfunction
@@ -28,6 +28,11 @@ function! s:InitList()
     set nomodifiable
 endfunction
 
+" Show all currently existing lists
+function! s:AllLists()
+    execute "!ls " . s:path
+endfunction
+
 " TODO: Replace checks with the correct character
 function! s:CleanupList()
 endfunction
@@ -35,6 +40,11 @@ endfunction
 " Adds List command
 if !exists(":List")
     command -nargs=? List :call s:OpenList(<f-args>)
+endif
+
+" Adds AllLists command
+if !exists(":AllLists")
+    command AllLists :call s:AllLists()
 endif
 
 " Trigger for s:InitList
