@@ -1,4 +1,4 @@
-*list.txt* Simple lists in a sidebar
+*list.txt* Simple lists in a sidebar           *vim-list*
 
        _                 _ _     _    ~
 __   _(_)_ __ ___       | (_)___| |_  ~
